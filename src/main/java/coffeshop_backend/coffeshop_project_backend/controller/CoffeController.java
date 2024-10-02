@@ -33,7 +33,7 @@ public class CoffeController implements CoffeApi {
 	public ResponseEntity<String> getByCoffeName(String name) {
 		CoffeDto coffe = this.coffeService.getByCoffeName(name);
 		String coffeName = coffe.getName();
-		return ResponseEntity.ok(coffeName);
+		return new  ResponseEntity<>(coffeName,HttpStatus.OK);
 	}
 
 	@Override

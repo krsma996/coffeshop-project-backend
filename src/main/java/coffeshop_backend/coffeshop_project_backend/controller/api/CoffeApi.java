@@ -27,8 +27,7 @@ public interface CoffeApi {
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_400,description = "Bad Request,invalid input parameters"),
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_403,description = "Forbidden"),
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_404,description = "Resource not found"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")
-		
+		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")		
 	})
 	@GetMapping("/hello")
 	public ResponseEntity<TestiranjePozivaKlasa> helloNikola();
@@ -40,8 +39,7 @@ public interface CoffeApi {
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_400,description = "Bad Request,invalid input parameters"),
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_403,description = "Forbidden"),
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_404,description = "Resource not found"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")
-		
+		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")	
 	})
 	@GetMapping("/test")
 	public String cao();
@@ -54,8 +52,7 @@ public interface CoffeApi {
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_400,description = "Bad Request,invalid input parameters"),
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_403,description = "Forbidden"),
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_404,description = "Resource not found"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")
-		
+		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")	
 	})
 	@GetMapping("/coffeName")
 	public ResponseEntity<String> getByCoffeName(@RequestParam String name);
@@ -68,8 +65,7 @@ public interface CoffeApi {
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_400,description = "Bad Request,invalid input parameters"),
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_403,description = "Forbidden"),
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_404,description = "Resource not found"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")
-		
+		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")	
 	})
 	@PostMapping("/saveCoffe")
 	public ResponseEntity<CoffeDto> saveCoffeToDatabase(@RequestBody CoffeDto coffeDto);
