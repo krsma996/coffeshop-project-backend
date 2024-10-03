@@ -44,7 +44,17 @@ public class CoffeController implements CoffeApi {
 		CoffeDto newCoffe = this.coffeService.save(coffeDto);
 		return new ResponseEntity<>(newCoffe,HttpStatus.CREATED);
 	}
-	
+
+	@Override
+	public ResponseEntity<CoffeDto> deleteCoffeFromDb(String coffeName) {
+		if(coffeName == null || coffeName.isBlank()) {
+			throw new NullPointerException("Name is null !!");
+		}
+		CoffeDto coffeDeleted = this.coffeService.deleteCoffeByName(coffeName);
+		return new ResponseEntity<>(coffeDeleted,HttpStatus.OK);
+	}
+
+
 
 
 

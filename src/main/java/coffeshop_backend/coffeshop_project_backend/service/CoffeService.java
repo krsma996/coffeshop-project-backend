@@ -9,5 +9,7 @@ public interface CoffeService {
 	CoffeDto getByCoffeName(String name);
 	
 	CoffeDto save(@NotNull CoffeDto coffeDto);
+	
+	CoffeDto deleteCoffeByName(String coffeName);
 
 }

@@ -52,6 +52,20 @@ public class CoffeServiceImpl implements CoffeService {
 		
 	}
 
+	@Override
+	public CoffeDto deleteCoffeByName(String coffeName) {
+		Coffe foundedCoffe = this.coffeDao.getByCoffeName(coffeName);
+		if(foundedCoffe !=null) {
+			log.info("Coffe founded it is going to be deleted from db");
+			this.coffeDao.delete(foundedCoffe);
+			log.info("Successfully deleted coffe from db");
+			
+		}else {
+			throw new NullPointerException("coffe dosent exist");
+		}
+		return null;
+	}
+
 	
 
 	
