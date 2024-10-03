@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import coffeshop_backend.coffeshop_project_backend.dto.CoffeDto;
-import coffeshop_backend.coffeshop_project_backend.dto.TestiranjePozivaKlasa;
 import coffeshop_backend.coffeshop_project_backend.utils.ApplicationConstants;
 import coffeshop_backend.coffeshop_project_backend.utils.ApplicationStatusCode;
 import io.swagger.v3.oas.annotations.Operation;
@@ -20,33 +19,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 	 description = "The api for dealing with all about Coffe information")
 public interface CoffeApi {
 	
-	
-	
-	@Operation(summary = "Hello Nikola test",description = "Test api")
-	@ApiResponses(value = {
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_200,description = "Ok"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_400,description = "Bad Request,invalid input parameters"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_403,description = "Forbidden"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_404,description = "Resource not found"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")		
-	})
-	@GetMapping("/hello")
-	public ResponseEntity<TestiranjePozivaKlasa> helloNikola();
-	
-	
-	@Operation(summary = "Test return by string",description = "Test return by string ")
-	@ApiResponses(value = {
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_200,description = "Ok"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_400,description = "Bad Request,invalid input parameters"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_403,description = "Forbidden"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_404,description = "Resource not found"),
-		@ApiResponse(responseCode = ApplicationStatusCode.CODE_500,description = "Internal server error,something went wrong")	
-	})
-	@GetMapping("/test")
-	public String cao();
-	
-	
-	
+
 	@Operation(summary = "Test getting by coffe name ",description = "Test return a value from a db by name")
 	@ApiResponses(value = {
 		@ApiResponse(responseCode = ApplicationStatusCode.CODE_200,description = "Ok"),

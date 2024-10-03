@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import coffeshop_backend.coffeshop_project_backend.controller.api.CoffeApi;
 import coffeshop_backend.coffeshop_project_backend.dto.CoffeDto;
-import coffeshop_backend.coffeshop_project_backend.dto.TestiranjePozivaKlasa;
 import coffeshop_backend.coffeshop_project_backend.service.CoffeService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -18,16 +17,6 @@ public class CoffeController implements CoffeApi {
 	
 	private final CoffeService coffeService;
 
-	@Override
-	public ResponseEntity<TestiranjePozivaKlasa> helloNikola() {
-		TestiranjePozivaKlasa test = new TestiranjePozivaKlasa("NikolaCAjic");
-		return ResponseEntity.ok(test);
-	}
-
-	@Override
-	public String cao() {
-		return "Cao";
-	}
 
 	@Override
 	public ResponseEntity<String> getByCoffeName(String name) {
