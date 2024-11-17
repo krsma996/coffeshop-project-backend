@@ -2,8 +2,6 @@ package coffeshop_backend.coffeshop_project_backend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
@@ -14,7 +12,6 @@ public class WebConfig implements WebMvcConfigurer {
 
 	
 	@Bean
-	@Order(Ordered.HIGHEST_PRECEDENCE)
 	CorsFilter corsFilter() {
 		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
 		CorsConfiguration config = new CorsConfiguration();

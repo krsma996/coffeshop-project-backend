@@ -4,6 +4,8 @@ public class ApplicationStatusCode {
 	
 	public static final String CODE_200 = "OK";
 	
+	public static final String CODE_202 = "Created";
+	
 	public static final String CODE_400 = "Bad Request";
 	
 	public static final String CODE_403 = "Forbidden";

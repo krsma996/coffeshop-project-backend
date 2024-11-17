@@ -7,18 +7,12 @@ import lombok.ToString;
 
 @Data
 @ToString(callSuper = false)
-@Schema(description = "Coffe Data")
-public class CoffeDto {
+@Schema(description = "User Data")
+public class UserDto {
 
 	@NotNull
 	private int id;
-	private String name;
-	private double price;
-	private String brand;
-	private String description;	
-	
-	
-	
+	private String userName;
+	private String email;
+	private String password;
 }
-
-
