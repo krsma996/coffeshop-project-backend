@@ -16,8 +16,8 @@ public class SwaggerConfig {
 		
 		OpenAPI apiDoc = new OpenAPI();
 		apiDoc.info(new Info()
-				.title("Coffe Managment Api")
-				.description("Documentation of all apis in Coffe App")
+				.title("Car Managment Api")
+				.description("Documentation of all apis in Car App")
 				.version("1.0.0")
 				.license(new License()
 						.name("CopyRight by Nikola Krsmanovic").url("www.someExample.com")));
