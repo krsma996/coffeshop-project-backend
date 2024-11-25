@@ -8,7 +8,8 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@PropertySources(value = { @PropertySource("file:${user.home}/.carnikola/configuration.properties")})
+@PropertySources(
+		value = { @PropertySource("file:${user.home}/.carnikola/configuration.properties")})
 @EnableScheduling
 @EnableAsync
 public class CoffeshopProjectBackendApplication {
